@@ -17,18 +17,35 @@ public class WordUnscrambler
 		String[] words = new String[];
 		String answer;
 		String scrambled;
+		final int NUMBER_OF_WORDS = 15;
 		int decision;
 		int index1;
 		int index2;
+		char temp;
 		
-		System.out.println("Enter 1 to swap letters.");
-		System.out.println("Enter 2 to solve.");
-		System.out.println("Enter 3 to quit.");
-		userWord = scnr.next();
+		for (int i = 0; i < NUMBER_OF_WORDS; ++i){
+			words[i] = textScan.next();
+		}
 		
-		System.out.println("Enter the indexes seperated by spaces");
-		userWord = scnr.next;
+		while (run)
+		{
+			answer = words[rand.nextInt(Number_OF_WORDS)];
+			
+			char[] charScramble = new char[answer.length()];
+			charScramble = answer.toCharArray();
+			for (int i = 0; i < (charScramble.length - 1); i++)
+			{
+				int j = rand.nextInt(charScramble.length - 1);
+				temp = charScramble[i];
+				charScramble[i] = charScramble[j]; 
+				charScramble[j] = temp;
+			}
+			
+			scrambled = String.valueOf*charScramble);
+			int counter = 0;
+		}
 		
-		System.out.println("Congratulations! You unscrambled the word project in " + " steps.");
+		System.out.println("Congratulations! You unscrambled the word project in " + " steps.");\
+		word.close();
 	}
 }
