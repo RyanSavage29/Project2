@@ -12,8 +12,12 @@ public class WordUnscrambler
 		Scanner textScnr = new Scanner(word);
 		Random rand = new Random();
 		
+		boolean run = true;
+		boolean end = false;
+		String[] words = new String[];
 		String answer;
 		String scrambled;
+		int decision;
 		int index1;
 		int index2;
 		
