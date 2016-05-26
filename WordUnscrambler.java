@@ -93,6 +93,32 @@ public class WordUnscrambler
 					break;
 				}
 			}
+			if (scrambled.equals(answer))
+			{
+				if (!end)
+				{
+					System.out.println("Congratulations. The answer was " + answer + ". It took you " + turnCounter + " turns to solve. Try another one?");
+				}
+				else
+				{
+				System.out.println("You gave up after " + turnCounter + " turns. Good for you. :^)");
+				System.out.println("1 to go again. 2 to quit.");
+				decision = scnr.nextInt();
+				switch (decision)
+					{
+						case 1:
+						end = false;
+						break;
+						case 2:
+						System.out.println("Now quitting.");
+						run = false;
+						break;
+						default:
+						System.out.println("Assuming unwillingness to comply as eagerness to play. Starting new game.");
+						break;
+					}
+				}
+			}
 		}
 		word.close();
 	}
